@@ -1,19 +1,19 @@
 """
-Hermes Rate Limit Tester
-========================
+Mk.01-Rate-Limit-Tester
+=======================
 
 GUI and headless utility for exercising API rate limits. This implementation
-is based on an earlier internal tool and has been adapted for the Hermes
+is based on an earlier internal tool and has been adapted for the Mk.01-Rate-Limit-Tester
 project with a reusable run configuration, optional preset handling, and the
 ability to export logs and summaries.
 
 Usage
 -----
 GUI:
-    python Hermes.py
+    python Mk.01-Rate-Limit-Tester.py
 
 Headless example:
-    python Hermes.py --url https://example.com/health \\
+    python Mk.01-Rate-Limit-Tester.py --url https://example.com/health \\
         --rps 10 --duration 60 --timeout 5 --headers headers.txt --log-file out.log
 """
 
@@ -1009,7 +1009,7 @@ def run_headless(args: argparse.Namespace) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Hermes Rate Limit Tester")
+    parser = argparse.ArgumentParser(description="Mk.01-Rate-Limit-Tester")
     parser.add_argument("--url", help="Target URL for the probe")
     parser.add_argument("--method", default="GET", help="HTTP method (default: GET)")
     parser.add_argument("--rps", type=int, default=5, help="Requests per second")
